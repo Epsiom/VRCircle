@@ -4,11 +4,12 @@ using UnityEngine;
 
 public abstract class SpellBehaviour : MonoBehaviour
 {
-    protected double CastCountdown = 1; // Time in seconds after which the spell is cast
+    protected float CastCountdown = 1f; // Time in seconds after which the spell is cast
+    protected bool _IsSpellCast = false;
 
     protected abstract void CastSpell();
 
-    void Update()
+    protected virtual void Update()
     {
         if (CastCountdown >= 0)
         {
@@ -21,6 +22,7 @@ public abstract class SpellBehaviour : MonoBehaviour
 
         if (CastCountdown <= 0)
         {
+            _IsSpellCast = true;
             CastSpell();
         }
     }
