@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c37a9dc7a9519a46ae7e9c060da3aff, type: 3}
+  m_Name: SpellBook01
+  m_EditorClassIdentifier: 
+  spellBookEntries:
+  - name: Fizzle
+    description: A spell that does nothing, and is cast by default if the input is
+      invalid.
+    input: '-'
+    spellObjectPrefab: {fileID: 8865902991209588002, guid: 54a86a159ebe63e4c8b6108e9d245690, type: 3}
