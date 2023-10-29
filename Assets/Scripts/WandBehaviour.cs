@@ -15,15 +15,7 @@ public class WandBehaviour : MonoBehaviour
     GameObject _MagicCirclePrefab;
 
     [SerializeField]
-    [Tooltip("The point at which the magic circle is instantiated : a meter or so in front of the wand")]
-    Transform _MagicCircleSpawningPoint;
-
-    [SerializeField]
-    [Tooltip("The point at which spell objects are instantiated : the tip of the wand")]
-    Transform _SpellSpawningPoint;
-
-    [SerializeField]
-    [Tooltip("The point that the project is created")]
+    [Tooltip("The layer of the Magic Circle")]
     LayerMask _hitLayer;
 
     // References the instantiated magic circle
@@ -39,6 +31,11 @@ public class WandBehaviour : MonoBehaviour
     [SerializeField] private string _CurrentSpell = "";
 
 
+    /// <summary>
+    /// The function to call to start or stop the current spell of the wand.
+    /// Starting a spell means spawning the magic circle and looping raycasts to register spell elements.
+    /// Stopping the spell means attempting to cast the resulting spell.
+    /// </summary>
     public void StartOrStopSpell()
     {
         _IsSpellInProgress = !_IsSpellInProgress;
@@ -46,10 +43,13 @@ public class WandBehaviour : MonoBehaviour
         {
             // Starts a spell
             _CurrentSpell = "";
+
+            //Fixes the magic circle's x rotation at 90 to avoid it being tilted
+            //Quaternion magicCircleRotation = Quaternion.Euler(90f, GlobalReferences.Instance.MagicCircleSpawningPoint.rotation.y, GlobalReferences.Instance.MagicCircleSpawningPoint.rotation.z);
+            //_CurrentMagicCircleObjectReference = Instantiate(_MagicCirclePrefab, GlobalReferences.Instance.MagicCircleSpawningPoint.position, magicCircleRotation, null);
             
-            //m_StartPoint.eulerAngles = new Vector3(90, m_StartPoint.eulerAngles.y, m_StartPoint.eulerAngles.z);
-            _CurrentMagicCircleObjectReference = Instantiate(_MagicCirclePrefab, _MagicCircleSpawningPoint.position, _MagicCircleSpawningPoint.rotation, null);
-            
+            _CurrentMagicCircleObjectReference = Instantiate(_MagicCirclePrefab, GlobalReferences.Instance.MagicCircleSpawningPoint.position, GlobalReferences.Instance.MagicCircleSpawningPoint.rotation, null);
+
             _CurrentMagicCircleTextReference = _CurrentMagicCircleObjectReference.transform.Find("Current Spell Text (TMP)").GetComponent<TextMeshPro>();
             _CurrentMagicCircleTextReference.text = _CurrentSpell;
 
@@ -148,6 +148,6 @@ public class WandBehaviour : MonoBehaviour
             Debug.LogError("THE FIZZLE SPELL HAS NOT BEEN FOUND OR THE SPELL'S PREFAB IS NULL");
             return;
         }
-        Instantiate(matchingSpell.spellObjectPrefab, _SpellSpawningPoint.position, _SpellSpawningPoint.rotation, null);
+        Instantiate(matchingSpell.spellObjectPrefab, GlobalReferences.Instance.SpellSpawningPoint.position, GlobalReferences.Instance.SpellSpawningPoint.rotation, null);
     }
 }

@@ -22,3 +22,12 @@ MonoBehaviour:
     description: A default linear projectile.
     input: 236
     spellObjectPrefab: {fileID: 4374230922530632379, guid: 1b34aadd5dcda304c94116cd53568a92, type: 3}
+  - name: Shakunetsu Hadoken
+    description: A default linear projectile, but red and bigger.
+    input: 63214
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 91e2bee1c838c8f4fa8fe7450731173d, type: 3}
+  - name: Shinku Hadoken
+    description: A default linear projectile, but slower, longer to cast, and way
+      bigger
+    input: 236236
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 5d04771077c28264794d2969d5bfe268, type: 3}

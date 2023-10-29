@@ -12,9 +12,9 @@ TagManager:
   - MagicCircle
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Environment
   - 
   - 
   - 

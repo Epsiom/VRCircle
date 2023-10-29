@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3937616540648280978}
+  - component: {fileID: 4298957483025776798}
   - component: {fileID: 53481349705570759}
   - component: {fileID: 882218438136582504}
-  - component: {fileID: 4298957483025776798}
   - component: {fileID: 3361365223716488817}
   - component: {fileID: 7716244083975479376}
   - component: {fileID: 1113972685345330517}
@@ -39,6 +39,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4298957483025776798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4374230922530632379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bab67645c28dc4419ffd73300a946e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TargetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _SpellDamage: 1
+  ProjectileSpeed: 50
+  InitialScale: 0.0015
+  FinalScale: 0.15
 --- !u!33 &53481349705570759
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -89,21 +108,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4298957483025776798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4374230922530632379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bab67645c28dc4419ffd73300a946e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectileSpeed: 50
-  InitialScale: 0.0015
-  FinalScale: 0.15
 --- !u!135 &3361365223716488817
 SphereCollider:
   m_ObjectHideFlags: 0

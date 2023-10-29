@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8311674825928671645}
   - component: {fileID: 4302736667568152978}
+  - component: {fileID: 6392363418587202091}
   m_Layer: 0
   m_Name: FizzleSpell
   m_TagString: Untagged
@@ -44,3 +45,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427397dd120297a4aaa707b0f0573c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _TargetLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _SpellDamage: 1
+--- !u!114 &6392363418587202091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8865902991209588002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f369c769e8961844a3c7ccacd4c3cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ProjectilePrefab: {fileID: 4812777098084798749, guid: a24db55e1f9277f459f8a602b53a9bb0, type: 3}
+  m_StartPoint: {fileID: 8311674825928671645}
+  m_LaunchSpeed: 500
