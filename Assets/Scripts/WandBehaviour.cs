@@ -44,11 +44,9 @@ public class WandBehaviour : MonoBehaviour
             // Starts a spell
             _CurrentSpell = "";
 
-            //Fixes the magic circle's x rotation at 90 to avoid it being tilted
-            //Quaternion magicCircleRotation = Quaternion.Euler(90f, GlobalReferences.Instance.MagicCircleSpawningPoint.rotation.y, GlobalReferences.Instance.MagicCircleSpawningPoint.rotation.z);
-            //_CurrentMagicCircleObjectReference = Instantiate(_MagicCirclePrefab, GlobalReferences.Instance.MagicCircleSpawningPoint.position, magicCircleRotation, null);
-            
-            _CurrentMagicCircleObjectReference = Instantiate(_MagicCirclePrefab, GlobalReferences.Instance.MagicCircleSpawningPoint.position, GlobalReferences.Instance.MagicCircleSpawningPoint.rotation, null);
+            // Instantiates the magic circle's prefab and fixes the magic circle's x rotation at 90 to avoid it being tilted
+            Quaternion adjustedRotation = Quaternion.LookRotation(GlobalReferences.Instance.Wand.position - GlobalReferences.Instance.MagicCircleSpawningPoint.position) * Quaternion.Euler(90f, 0f, 0f);
+            _CurrentMagicCircleObjectReference = Instantiate(_MagicCirclePrefab, GlobalReferences.Instance.MagicCircleSpawningPoint.position, adjustedRotation, null);
 
             _CurrentMagicCircleTextReference = _CurrentMagicCircleObjectReference.transform.Find("Current Spell Text (TMP)").GetComponent<TextMeshPro>();
             _CurrentMagicCircleTextReference.text = _CurrentSpell;
