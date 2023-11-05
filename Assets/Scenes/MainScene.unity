@@ -229,7 +229,7 @@ MonoBehaviour:
   - Assets/Materials/StartingArea.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_4d2c58cf-58af-4f17-855a-4ab05fa15967
+    name: UM_OperatedMesh_9b51a6c7-8c3e-4e44-b99b-d70ec8e0f87c
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: a6ab03f46371b4848acfd6effdd660cd, type: 2}
     buidVersion:
@@ -244,7 +244,7 @@ MonoBehaviour:
     modifierList: []
     currentIndex: -1
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 4d2c58cf-58af-4f17-855a-4ab05fa15967
+  sourceMeshRendererGUID: 9b51a6c7-8c3e-4e44-b99b-d70ec8e0f87c
   guid: a7fecbee-d1c1-4efe-bff9-8b8c35c03461
   localOptions:
     RecalculateTangents: 0
@@ -1474,16 +1474,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22984866529011177, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: SpawnDelay
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _KnotMinimalHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: _EnemyPrefabToSpawn
       value: 
       objectReference: {fileID: 6500800842562642357, guid: 150560490e12c6b48a47ca5577efbabd, type: 3}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _SplineKnotPerDistanceUnit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _SplineRandomnessMagnitude
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7433204974536097472, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.54
@@ -1626,7 +1638,7 @@ MonoBehaviour:
   - Packages/com.tripolygon.umodeler-x/Resources/Materials/UModelerX_Gray_URP.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_e41a8645-bdd0-4b18-aa61-1ebac8c24a73
+    name: UM_OperatedMesh_7e1751fc-ecda-413f-b866-91850506c4c7
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: e03275e2149ce8e489097d00cb20f988, type: 2}
     buidVersion:
@@ -1641,7 +1653,7 @@ MonoBehaviour:
     modifierList: []
     currentIndex: -1
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: e41a8645-bdd0-4b18-aa61-1ebac8c24a73
+  sourceMeshRendererGUID: 7e1751fc-ecda-413f-b866-91850506c4c7
   guid: 7408abb3-4e1e-451f-8da1-05fd747aab26
   localOptions:
     RecalculateTangents: 0
@@ -1875,16 +1887,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22984866529011177, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: SpawnDelay
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _KnotMinimalHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: _EnemyPrefabToSpawn
       value: 
       objectReference: {fileID: 6500800842562642357, guid: 150560490e12c6b48a47ca5577efbabd, type: 3}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _SplineKnotPerDistanceUnit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _SplineRandomnessMagnitude
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7433204974536097472, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.19
@@ -1951,9 +1975,61 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _KnotMinimalHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: _EnemyPrefabToSpawn
       value: 
-      objectReference: {fileID: 6500800842562642357, guid: 150560490e12c6b48a47ca5577efbabd, type: 3}
+      objectReference: {fileID: 6500800842562642357, guid: f48fd821106aafc4691318d073a2d1b1, type: 3}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _SplineKnotPerDistanceUnit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241394508354847738, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: _SplineRandomnessMagnitude
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[0].Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[0].Tension
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentIn.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentOut.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[0].m_DistanceToInterpolation.Array.size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[0].m_DistanceToInterpolation.Array.data[0].T
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116157687178662338, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[0].m_DistanceToInterpolation.Array.data[0].Distance
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7433204974536097472, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9
