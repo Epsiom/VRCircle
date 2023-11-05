@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Shapes;
+using UnityEngine.InputSystem;
 
 public class WandBehaviour : MonoBehaviour
 {
@@ -18,25 +19,40 @@ public class WandBehaviour : MonoBehaviour
     [Tooltip("The layer of the Magic Circle")]
     LayerMask _hitLayer;
 
-    // References the instantiated magic circle
-    [SerializeField] private GameObject _CurrentMagicCircleObjectReference;
-    [SerializeField] private TextMeshPro _CurrentMagicCircleTextReference;
-    [SerializeField] private Polyline _CurrentMagicCirclePolylineReference;
+    // References to the wand's spawning points
+    [SerializeField] private GameObject _MagicCircleSpawningPoint;
+    [SerializeField] private GameObject _SpellSpawningPoint;
 
     // Used to determine if a hit on the magic circle registers as a valid spell element (no hit is registered in the central circle)
     [SerializeField] private double _MagicCircleDeadzoneRadius;
 
-    [SerializeField] private bool _IsSpellInProgress = false;
+    // The input action in charge of detecting if the player is pressing the trigger
+    [SerializeField] private InputActionReference triggerAction;
 
-    [SerializeField] private string _CurrentSpell = "";
+    // References to the instantiated magic circle
+    private GameObject _CurrentMagicCircleObjectReference;
+    private TextMeshPro _CurrentMagicCircleTextReference;
+    private Polyline _CurrentMagicCirclePolylineReference;
+    
+    private bool _IsSpellInProgress = false;
+    private string _CurrentSpell = "";
 
+    private void Start()
+    {
+        triggerAction.action.Enable();
+        triggerAction.action.performed += StartOrStopSpell;
+
+        GlobalReferences.Instance.Wand = this.gameObject.transform;
+        GlobalReferences.Instance.MagicCircleSpawningPoint = _MagicCircleSpawningPoint.transform;
+        GlobalReferences.Instance.SpellSpawningPoint = _SpellSpawningPoint.transform;
+    }
 
     /// <summary>
     /// The function to call to start or stop the current spell of the wand.
     /// Starting a spell means spawning the magic circle and looping raycasts to register spell elements.
     /// Stopping the spell means attempting to cast the resulting spell.
     /// </summary>
-    public void StartOrStopSpell()
+    public void StartOrStopSpell(InputAction.CallbackContext obj)
     {
         _IsSpellInProgress = !_IsSpellInProgress;
         if (_IsSpellInProgress)
