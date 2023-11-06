@@ -40,8 +40,9 @@ public class SpawnerBehaviour : MonoBehaviour
         SpawnCountdown -= Time.deltaTime;
         if (SpawnCountdown <= 0)
         {
-            _EnemyPrefabToSpawn.GetComponent<SplineAnimate>().Container = this.gameObject.GetComponent<SplineContainer>();
-            Instantiate(_EnemyPrefabToSpawn, this.transform.position, this.transform.rotation);
+            GameObject spawnedEnemy = Instantiate(_EnemyPrefabToSpawn, this.transform.position, this.transform.rotation);
+            SplineContainer splineContainer = this.gameObject.GetComponent<SplineContainer>();
+            spawnedEnemy.GetComponent<SplineFollowingEnemyBehaviour>().Init(splineContainer);
 
             SpawnCountdown = SpawnDelay;
         }
