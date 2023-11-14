@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class ShinkuHadokenBehaviour : SpellBehaviour
+public class ShinkuHadokenBehaviour : BaseSpellBehaviour
 {
     public float ProjectileSpeed = 25f;
     public float InitialScale = 0.0015f;

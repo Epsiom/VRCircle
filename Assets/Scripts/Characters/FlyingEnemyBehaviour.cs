@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 //using DG.Tweening;
 
-public class FlyingEnemyBehaviour : BaseCharacterBehaviour
+public class FlyingEnemyBehaviour : BaseEnemyBehaviour
 {
     private float followSpeed = 0.005f;
 
+    /*
     void Start()
     {
-        //transform.DOMove(playerObject.transform.position, followSpeed).SetLoops(-1, LoopType.Restart);
-    }
+        transform.DOMove(playerObject.transform.position, followSpeed).SetLoops(-1, LoopType.Restart);
+    }*/
 
     void Update()
     {

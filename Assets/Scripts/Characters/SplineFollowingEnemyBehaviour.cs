@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class SplineFollowingEnemyBehaviour : BaseCharacterBehaviour
+public class SplineFollowingEnemyBehaviour : BaseEnemyBehaviour
 {
     private float followSpeed = 2f;
 

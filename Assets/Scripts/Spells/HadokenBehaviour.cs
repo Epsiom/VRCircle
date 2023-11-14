@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class HadokenBehaviour : SpellBehaviour
+public class HadokenBehaviour : BaseSpellBehaviour
 {
     public float ProjectileSpeed = 50f;
     public float InitialScale = 0.0015f;

@@ -31,3 +31,7 @@ MonoBehaviour:
       bigger
     input: 236236
     spellObjectPrefab: {fileID: 4374230922530632379, guid: 5d04771077c28264794d2969d5bfe268, type: 3}
+  - name: Ultracoin
+    description: Throws a coin, then a fast projectile to hit the coin
+    input: 82
+    spellObjectPrefab: {fileID: 5836180816200516261, guid: 95f0f0ad4ff68b944bbd30713c687083, type: 3}

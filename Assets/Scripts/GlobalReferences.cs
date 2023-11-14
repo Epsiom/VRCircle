@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Stores a reference to important positions
+/// </summary>
 public class GlobalReferences : MonoBehaviour
 {
     // PLAYER:
@@ -18,6 +21,8 @@ public class GlobalReferences : MonoBehaviour
     [Tooltip("The point at which spell objects are instantiated : the tip of the wand")]
     public Transform SpellSpawningPoint;
 
+
+    // --- Singleton management ---
 
     private static GlobalReferences instance;
 
