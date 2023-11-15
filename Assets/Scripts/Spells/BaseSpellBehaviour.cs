@@ -12,12 +12,12 @@ public abstract class BaseSpellBehaviour : MonoBehaviour
     [Tooltip("The damage delt by the spell")]
     private int _SpellDamage = 1;
 
-    [SerializeField] protected float CastCountdown = 1f; // Time in seconds after which the spell is cast
-    protected bool _IsSpellCast = false;
+    [SerializeField] protected float CastCountdownTimer = 1f; // Time in seconds after which the spell is cast
+    //protected bool _IsSpellCast = false;
 
     protected abstract void CastSpell();
 
-
+    /*
     protected virtual void Update()
     {
         if (CastCountdown >= 0)
@@ -34,6 +34,12 @@ public abstract class BaseSpellBehaviour : MonoBehaviour
             _IsSpellCast = true;
             CastSpell();
         }
+    }
+    */
+
+    protected virtual void Start()
+    {
+        Invoke(nameof(CastSpell), CastCountdownTimer);
     }
 
     protected virtual void OnCollisionEnter(Collision collision)

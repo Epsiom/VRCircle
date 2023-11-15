@@ -22,7 +22,7 @@ public class EnemyReferences : MonoBehaviour
         }
     }
 
-    public void DestroyEnemyReference(GameObject enemyGameobject)
+    public void RemoveEnemyReference(GameObject enemyGameobject)
     {
         Enemies.Remove(enemyGameobject);
     }
@@ -34,10 +34,10 @@ public class EnemyReferences : MonoBehaviour
     /// <returns>Either the GameObject of the closest enemy, or null if there are no enemies</returns>
     public GameObject FindClosestEnemyToPosition(Transform targetTransform)
     {
+        if (this.Enemies.Count == 0) return null;
+        
         GameObject closestEnemy = Enemies[0];
         float closestEnemyDistance = float.PositiveInfinity;
-
-        if (this.Enemies.Count == 0) return null;
 
         foreach (GameObject enemy in this.Enemies)
         {

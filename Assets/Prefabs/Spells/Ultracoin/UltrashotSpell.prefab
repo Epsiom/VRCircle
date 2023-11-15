@@ -53,9 +53,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 576
+    m_Bits: 64
   _SpellDamage: 1
-  CastCountdown: 1
+  CastCountdownTimer: 0.5
   ProjectileSpeed: 50
   InitialScale: 0.05
   FinalScale: 0.05
@@ -126,7 +126,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

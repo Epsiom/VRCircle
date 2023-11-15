@@ -17,6 +17,7 @@ public class BaseEnemyBehaviour : MonoBehaviour
         _Health -= damagePointsInflicted;
         if (_Health <= 0)
         {
+            EnemyReferences.Instance.RemoveEnemyReference(this.gameObject);
             Destroy(this.gameObject);
         }
     }

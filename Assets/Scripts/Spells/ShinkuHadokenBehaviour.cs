@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+//TODO: Replace in the prefabs by ProjectileSpellBehaviour, then remove
+
 public class ShinkuHadokenBehaviour : BaseSpellBehaviour
 {
     public float ProjectileSpeed = 25f;
@@ -12,15 +14,17 @@ public class ShinkuHadokenBehaviour : BaseSpellBehaviour
     private Rigidbody _Rigidbody;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        this.CastCountdown = 2f;
+        this.CastCountdownTimer = 2f;
 
         _Rigidbody = this.GetComponent<Rigidbody>();
         this.transform.SetParent(GlobalReferences.Instance.Wand);    //Attaches the spell to the wand until it fires
 
         this.transform.localScale = new Vector3(InitialScale, InitialScale, InitialScale);
-        this.transform.DOScale(new Vector3(FinalScale, FinalScale, FinalScale), this.CastCountdown);
+        this.transform.DOScale(new Vector3(FinalScale, FinalScale, FinalScale), this.CastCountdownTimer);
+
+        base.Start();
     }
 
     /*

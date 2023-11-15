@@ -6,10 +6,12 @@ public class FizzleBehaviour : BaseSpellBehaviour
 {
     private Unity.VRTemplate.LaunchProjectile _LaunchProjectile;
 
-    private void Start()
+    protected override void Start()
     {
-        CastCountdown = 0;
+        CastCountdownTimer = 0;
         _LaunchProjectile = this.GetComponent<Unity.VRTemplate.LaunchProjectile>();
+
+        base.Start();
     }
 
     protected override void CastSpell()
