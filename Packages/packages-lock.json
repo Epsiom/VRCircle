@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.tripolygon.umodeler-x": {
-      "version": "file:C:\\Users\\steve\\Desktop\\_PROJECTS\\Unity\\VRCircle\\Packages\\com.tripolygon.umodeler-x-0.14.6\\com.tripolygon.umodeler-x-0.14.6.tgz",
+      "version": "file:com.tripolygon.umodeler-x-0.14.7/com.tripolygon.umodeler-x-0.14.7.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {}
