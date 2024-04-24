@@ -84,8 +84,9 @@ public class NumpadWandBehaviour : MonoBehaviour
     /// <param name="input">The input of the spell to cast</param>
     private void AttemptToCastSpell(string input)
     {
-        Debug.Log("Numpad spell : changing the global wand position to the nupad wand");
+        Debug.Log("Numpad spell : changing the global positions to the ones of the nupad wand");
         GlobalReferences.Instance.Wand = this.gameObject.transform;
+        GlobalReferences.Instance.SpellSpawningPoint = _spellSpawningPoint;
 
         SpellBookEntry matchingSpell = _spellBookSO.getSpellObject(input);
         if (matchingSpell == null) matchingSpell = _spellBookSO.getSpellObject("-");     // Gets a 'fizzle' spell
