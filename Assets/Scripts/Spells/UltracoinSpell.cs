@@ -25,6 +25,8 @@ public class UltracoinSpell : MonoBehaviour
 
     [SerializeField] protected float CoinThrowCountdownTimer = 0.5f; // Time in seconds after which the coin is thrown
 
+    private bool IsCoinThrown = false;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -34,6 +36,14 @@ public class UltracoinSpell : MonoBehaviour
         this.transform.SetParent(GlobalReferences.Instance.Wand.transform);    //Attaches the spell to the wand until it fires
 
         //this.transform.DORotate(new Vector3(180f, 0f, 0f), _CoinRotationSpeed, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
+    }
+
+    void Update()
+    {
+        if (IsCoinThrown)
+        {
+            transform.Rotate(1080 * Time.deltaTime, 0, 0); //rotates 1080 degrees per second around x axis
+        }
     }
 
     /// <summary>
@@ -57,6 +67,8 @@ public class UltracoinSpell : MonoBehaviour
         _CoinRigidbody.isKinematic = false;
         _CoinRigidbody.useGravity = true;
         _CoinRigidbody.velocity = directionVector * _CoinSpeed;
+
+        IsCoinThrown = true;
 
         // Instantiates the Ultrashot at its own
         GameObject spawnedUltrashot = Instantiate(_UltrashotPrefab, GlobalReferences.Instance.SpellSpawningPoint.position, GlobalReferences.Instance.SpellSpawningPoint.rotation);

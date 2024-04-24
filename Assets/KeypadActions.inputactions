@@ -1,0 +1,294 @@
+{
+    "name": "KeypadActions",
+    "maps": [
+        {
+            "name": "Numpad",
+            "id": "1bba408c-888d-4957-8f2c-0e6fa798fafa",
+            "actions": [
+                {
+                    "name": "Numpad0",
+                    "type": "Button",
+                    "id": "3d3b1742-af23-41d5-825b-21dc0c7de65a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad1",
+                    "type": "Button",
+                    "id": "fb493efb-495d-42cf-8667-3d4f0a9c9b5b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad2",
+                    "type": "Button",
+                    "id": "10ee3589-207c-47d4-b44c-42c4fd871982",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad3",
+                    "type": "Button",
+                    "id": "a59773c6-3886-4493-8483-e2ed8619e2be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad4",
+                    "type": "Button",
+                    "id": "5a682af4-a9da-4b32-be1a-cee58f38971b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad5",
+                    "type": "Button",
+                    "id": "d05b2d9c-8b09-41d2-83d3-ce26e5f31173",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad6",
+                    "type": "Button",
+                    "id": "af4b72b8-87bb-4f17-af72-ea5c6155136f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad7",
+                    "type": "Button",
+                    "id": "2b36b29e-4135-4f5c-83bc-363ac1e343e8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad8",
+                    "type": "Button",
+                    "id": "41220a1a-e53a-49a6-9d81-4888a0ec2ae2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Numpad9",
+                    "type": "Button",
+                    "id": "d8083585-6224-4cb6-872c-1ee6600f3953",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NumpadEnter",
+                    "type": "Button",
+                    "id": "2a1c09e1-869a-43f2-9029-05a990f6e6b3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NumpadComa",
+                    "type": "Button",
+                    "id": "55c20dd5-43b8-49d9-88e1-41838515b80e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NumpadPlus",
+                    "type": "Button",
+                    "id": "98571d7b-0f52-48af-9e4e-eed62f0fc060",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "NumpadMinus",
+                    "type": "Button",
+                    "id": "1ba6e9a2-c8e7-4230-8767-e87049212fcc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "83a3b879-1fa8-4247-9dd7-359ccfe233a8",
+                    "path": "<Keyboard>/numpad0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad0",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be531410-5573-435a-bd2f-13ae11741d98",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1374b34b-0613-45ec-9fb4-2818c4cf1996",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c965c7e6-fae4-493c-93e3-49e14c99ded3",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8fe6b086-06a2-4106-b6a4-6e57a0b2519a",
+                    "path": "<Keyboard>/numpad4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eed9c148-274c-49e1-a00e-3c243c751fe4",
+                    "path": "<Keyboard>/numpad5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be025d1c-6ab5-4285-b7a0-fb6d32b3ec2f",
+                    "path": "<Keyboard>/numpad6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3902dde-8142-4b96-8fe6-7f4fbf711b33",
+                    "path": "<Keyboard>/numpad7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b83cd546-4334-40da-8d9a-06fd348972b6",
+                    "path": "<Keyboard>/numpad8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5c3d111-d9f2-4b7e-bc05-8e1f2c455e86",
+                    "path": "<Keyboard>/numpad9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Numpad9",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f8ba7d3-1a46-47fe-9e50-a260c5fdd6a3",
+                    "path": "<Keyboard>/numpadEnter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NumpadEnter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96df8877-adab-4ff9-9f8e-14db21995751",
+                    "path": "<Keyboard>/numpadPeriod",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NumpadComa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d240f490-3854-4f14-a2ee-adcae78f3859",
+                    "path": "<Keyboard>/numpadPlus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NumpadPlus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af2fbf44-7a4a-492b-8b3b-48e983b1fc48",
+                    "path": "<Keyboard>/numpadMinus",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NumpadMinus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
