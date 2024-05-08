@@ -11,7 +11,7 @@ public enum SpellElement
     FIRE = 4,
     WATER = 6,
     LAKE = 7,
-    HEAVEN = 8,
+    SKY = 8,
     WIND = 9
 }
 
@@ -21,7 +21,7 @@ public enum SpellElement
 {
     MOUNTAIN = 1,
     WATER = 2,
-    HEAVEN = 3,
+    SKY = 3,
     THUNDER = 4,
     LAKE = 6,
     WIND = 7,

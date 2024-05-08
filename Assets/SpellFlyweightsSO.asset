@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0fd23e46c2f794fa349d0ba505db85, type: 3}
+  m_Name: SpellFlyweightsSO
+  m_EditorClassIdentifier: 
+  _spellShapeFlyweights:
+  - shape: 1
+    spellObjectPrefab: {fileID: 0}
+  - shape: 2
+    spellObjectPrefab: {fileID: 0}
+  - shape: 3
+    spellObjectPrefab: {fileID: 0}
+  - shape: 4
+    spellObjectPrefab: {fileID: 0}
+  _spellElementFlyweights:
+  - element: 1
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: fc44b642f246ec24c9363d1edf9f12ba, type: 3}
+  - element: 2
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 8fb0c38979d92074d87f5360cede7a57, type: 3}
+  - element: 3
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 96139a7f22456c24eb9ff4851f6923ee, type: 3}
+  - element: 4
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 6aef9b5a37b755e43908327b6f85f95b, type: 3}
+  - element: 6
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 81d8ba67b57168641a13d9d0860af753, type: 3}
+  - element: 7
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 43fed36197589324995c8de601fc11cd, type: 3}
+  - element: 8
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: e81c28fa51c860a478c8432b861fbc8f, type: 3}
+  - element: 9
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 7256ecd9ea0460749b242e12a2564aaf, type: 3}

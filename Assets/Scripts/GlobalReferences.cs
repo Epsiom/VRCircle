@@ -7,11 +7,15 @@ using UnityEngine;
 /// </summary>
 public class GlobalReferences : MonoBehaviour
 {
-    // PLAYER:
+    [Header("SCRIPTABLE OBJECTS:")]
+    [Tooltip("The flyweight prefabs for the shapes and elements of the spells")]
+    public SpellFlyweightsSO SpellFlyweightsSO;
+
+    [Header("PLAYER:")]
     [Tooltip("The player : XR Origin (XR Rig)")]
     public Transform Player;
 
-    // WAND:
+    [Header("WAND:")]
     [Tooltip("The center of the wand")]
     public Transform Wand;
 
