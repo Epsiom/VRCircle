@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spellShapeFlyweights:
   - shape: 1
-    spellObjectPrefab: {fileID: 0}
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: b395b3f8bf30edc4c89637f3902739cf, type: 3}
   - shape: 2
     spellObjectPrefab: {fileID: 0}
   - shape: 3
-    spellObjectPrefab: {fileID: 0}
+    spellObjectPrefab: {fileID: 8310964603947034449, guid: 5854b316d11773e4894be973c7b5ca9f, type: 3}
   - shape: 4
     spellObjectPrefab: {fileID: 0}
   _spellElementFlyweights:

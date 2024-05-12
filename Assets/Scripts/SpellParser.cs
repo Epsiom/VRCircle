@@ -21,12 +21,16 @@ public static class SpellParser
         Enum.TryParse<SpellElement>(spellString.Substring(0,1), out SpellElement spellElement);
 
         // Then, the three first characters (first included) are parsed for the shape of the spell
-        string spellShapeStr = spellString.Substring(0, 2);
+        string spellShapeStr = spellString.Substring(0, 3);
+        Debug.Log(spellShapeStr);
         SpellShape spellShape = SpellShape.UNDEFINED;
         if (QCF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.PROJECTILE;
         if (QCB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.SHARDS;
         if (ZF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.BEAM;
         if (ZB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.WALL;
+
+        Debug.Log(spellElement);
+        Debug.Log(spellShape);
 
         if (spellShape == SpellShape.UNDEFINED) return null;
 

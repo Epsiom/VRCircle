@@ -74,7 +74,6 @@ public class NumpadWandBehaviour : MonoBehaviour
         {
             _currentSpell += elementNum;
             _currentSpellTextReference.text = _currentSpell;
-            Debug.Log(_currentSpell);
         }
     }
 
@@ -84,7 +83,7 @@ public class NumpadWandBehaviour : MonoBehaviour
     /// <param name="input">The input of the spell to cast</param>
     private void AttemptToCastSpell(string input)
     {
-        Debug.Log("Numpad spell : changing the global positions to the ones of the nupad wand");
+        Debug.Log("Numpad spell : "+input);
         GlobalReferences.Instance.Wand = this.gameObject.transform;
         GlobalReferences.Instance.SpellSpawningPoint = _spellSpawningPoint;
 
