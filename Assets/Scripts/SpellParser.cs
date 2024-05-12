@@ -22,7 +22,6 @@ public static class SpellParser
 
         // Then, the three first characters (first included) are parsed for the shape of the spell
         string spellShapeStr = spellString.Substring(0, 3);
-        Debug.Log(spellShapeStr);
         SpellShape spellShape = SpellShape.UNDEFINED;
         if (QCF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.PROJECTILE;
         if (QCB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.SHARDS;
@@ -47,12 +46,12 @@ public static class SpellParser
         {
             case SpellShape.PROJECTILE:
                 ProjectileSpellBehaviour projectileSpellBehaviour = spell.GetComponent<ProjectileSpellBehaviour>();
-                GameObject.Instantiate(spellElementFlyweightObject, Vector3.zero, Quaternion.identity, spell.transform);
+                GameObject.Instantiate(spellElementFlyweightObject, spell.transform.position, spell.transform.rotation, spell.transform);
                 //projectileSpellBehaviour.InitElement(spellElementFlyweightObject);
                 break;
             case SpellShape.BEAM:
                 BeamSpellBehaviour beamSpellBehaviour = spell.GetComponent<BeamSpellBehaviour>();
-                GameObject.Instantiate(spellElementFlyweightObject, Vector3.zero, Quaternion.identity, spell.transform);
+                GameObject.Instantiate(spellElementFlyweightObject, spell.transform.position, spell.transform.rotation, spell.transform);
                 //beamSpellBehaviour.InitElement(spellElementFlyweightObject);
                 break;
             case SpellShape.WALL:
