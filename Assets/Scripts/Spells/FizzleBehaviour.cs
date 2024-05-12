@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FizzleBehaviour : BaseSpellBehaviour
+public class FizzleBehaviour : BaseSolidSpellBehaviour
 {
     private Unity.VRTemplate.LaunchProjectile _LaunchProjectile;
 

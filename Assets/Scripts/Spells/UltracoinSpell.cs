@@ -20,7 +20,7 @@ public class UltracoinSpell : MonoBehaviour
     private LayerMask _ProjectileLayer;
 
     [SerializeField] private float _CoinSpeed;
-    [SerializeField] private float _CoinRotationSpeed = 20f;
+    //[SerializeField] private float _CoinRotationSpeed = 20f;
     private Rigidbody _CoinRigidbody;
 
     [SerializeField] protected float CoinThrowCountdownTimer = 0.5f; // Time in seconds after which the coin is thrown

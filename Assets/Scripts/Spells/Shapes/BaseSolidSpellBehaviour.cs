@@ -2,40 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseSpellBehaviour : MonoBehaviour
+/// <summary>
+/// The base of all 'solid' spells, which means the spells that impact something and inflict damage on contact then disappear
+/// The opposite of a solid spell is a piercing spell, which means one that deals continuous damage over time
+/// </summary>
+public abstract class BaseSolidSpellBehaviour : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("The layer of the character")]
+    [Tooltip("The layer of the enemy characters")]
     protected LayerMask TargetLayer;
 
     [SerializeField]
     [Tooltip("The damage delt by the spell")]
-    private int _SpellDamage = 1;
+    protected int _SpellDamage = 1;
 
     [SerializeField] protected float CastCountdownTimer = 1f; // Time in seconds after which the spell is cast
     //protected bool _IsSpellCast = false;
 
     protected abstract void CastSpell();
-
-    /*
-    protected virtual void Update()
-    {
-        if (CastCountdown >= 0)
-        {
-            CastCountdown -= Time.deltaTime;
-        }
-        else
-        {
-            return;
-        }
-
-        if (CastCountdown <= 0)
-        {
-            _IsSpellCast = true;
-            CastSpell();
-        }
-    }
-    */
 
     protected virtual void Start()
     {

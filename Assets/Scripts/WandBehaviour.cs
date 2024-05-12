@@ -155,13 +155,23 @@ public class WandBehaviour : MonoBehaviour
     /// <param name="input">The input of the spell to cast</param>
     private void AttemptToCastSpell(string input)
     {
-        SpellBookEntry matchingSpell = _SpellBookSO.getSpellObject(input);
-        if (matchingSpell == null) matchingSpell = _SpellBookSO.getSpellObject("-");     // Gets a 'fizzle' spell
-        if (matchingSpell == null || matchingSpell.spellObjectPrefab == null)
+        SpellBookEntry spellBookEntry = _SpellBookSO.getSpellObject(input);  // First, check if the spell is in the spellbook
+
+        // The spell is in the spellbook
+        if (spellBookEntry != null)
         {
-            Debug.LogError("THE FIZZLE SPELL HAS NOT BEEN FOUND OR THE SPELL'S PREFAB IS NULL");
+            Instantiate(spellBookEntry.spellObjectPrefab, GlobalReferences.Instance.SpellSpawningPoint.position, GlobalReferences.Instance.SpellSpawningPoint.rotation, null);
             return;
         }
-        Instantiate(matchingSpell.spellObjectPrefab, GlobalReferences.Instance.SpellSpawningPoint.position, GlobalReferences.Instance.SpellSpawningPoint.rotation, null);
+        else
+        {
+            GameObject modularSpell = SpellParser.ParseAndBuildSpell(input);   // Second, since the spell isn't in the spellbook, check and instantiate the modular spell
+
+            if (modularSpell == null)                                          // Third, if the modular spell is null, it wasn't instantiated, and we instantiate manually a fizzle spell instead
+            {
+                SpellBookEntry fizzleSpellBookEntry = _SpellBookSO.getSpellObject("-");     // Gets a 'fizzle' spell
+                Instantiate(fizzleSpellBookEntry.spellObjectPrefab, GlobalReferences.Instance.SpellSpawningPoint.position, GlobalReferences.Instance.SpellSpawningPoint.rotation, null);
+            }
+        }
     }
 }

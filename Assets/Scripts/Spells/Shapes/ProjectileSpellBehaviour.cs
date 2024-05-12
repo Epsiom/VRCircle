@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class ProjectileSpellBehaviour : BaseSpellBehaviour
+public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
 {
     public float ProjectileSpeed = 50f;
     public float InitialScale = 0.0015f;    // Initial scale of the spell's GameObject when first instanciated, after which it grows to FinalScale
@@ -27,6 +27,14 @@ public class ProjectileSpellBehaviour : BaseSpellBehaviour
         this.transform.DOScale(new Vector3(FinalScale, FinalScale, FinalScale), this.CastCountdownTimer);
         
         base.Start();
+    }
+
+    /// <summary>
+    /// Adds the components of the element flyweight prefab to the currently blank projectile (texture, trails.. etc)
+    /// </summary>
+    public void InitElement(GameObject spellElementFlyweightObject)
+    {
+        ComponentCopier.Copy(gameObject, spellElementFlyweightObject);
     }
 
     protected override void CastSpell()

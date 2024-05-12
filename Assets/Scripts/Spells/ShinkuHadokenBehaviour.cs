@@ -5,7 +5,7 @@ using DG.Tweening;
 
 //TODO: Replace in the prefabs by ProjectileSpellBehaviour, then remove
 
-public class ShinkuHadokenBehaviour : BaseSpellBehaviour
+public class ShinkuHadokenBehaviour : BaseSolidSpellBehaviour
 {
     public float ProjectileSpeed = 25f;
     public float InitialScale = 0.0015f;

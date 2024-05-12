@@ -5,7 +5,7 @@ using DG.Tweening;
 
 //TODO: Replace in the prefabs by ProjectileSpellBehaviour, then remove
 
-public class HadokenBehaviour : BaseSpellBehaviour
+public class HadokenBehaviour : BaseSolidSpellBehaviour
 {
     public float ProjectileSpeed = 50f;
     public float InitialScale = 0.0015f;

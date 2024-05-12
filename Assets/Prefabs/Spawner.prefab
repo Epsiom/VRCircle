@@ -50,6 +50,7 @@ MonoBehaviour:
   _InnerRing: {fileID: 1193319488878308591}
   _OuterRing: {fileID: 3529338336946358284}
   _EnemyPrefabToSpawn: {fileID: 6500800842562642357, guid: 150560490e12c6b48a47ca5577efbabd, type: 3}
+  SpawnDelay: 5
   _PathToPlayer:
     m_EditModeType: 1
     m_Knots: []
@@ -63,7 +64,9 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
-  SpawnDelay: 5
+  _SplineKnotPerDistanceUnit: 0.5
+  _SplineRandomnessMagnitude: 1
+  _KnotWorldMinimalHeight: 1
 --- !u!114 &4116157687178662338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +186,7 @@ MonoBehaviour:
     hardAngle: 0
     packMargin: 0
   saveData: {fileID: -1283722078649299333}
+  <IsDirtySaveData>k__BackingField: 0
   texturepaintdata:
   - {fileID: 0}
 --- !u!33 &5543793665817498779
@@ -314,6 +318,7 @@ MonoBehaviour:
     hardAngle: 0
     packMargin: 0
   saveData: {fileID: -124779052769935986}
+  <IsDirtySaveData>k__BackingField: 0
   texturepaintdata:
   - {fileID: 0}
 --- !u!33 &153395159147681473
