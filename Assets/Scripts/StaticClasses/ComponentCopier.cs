@@ -5,10 +5,12 @@ using UnityEngine;
 public static class ComponentCopier
 {
     /// <summary>
-    /// Copies the components from a GameObject to another
+    /// Copies the components from the source GameObject to the destination GameObject
     /// </summary>
     public static void Copy(GameObject source, GameObject destination)
     {
+        Debug.Log(source.name + " -> " + destination.name);
+
         // Get all components attached to the source GameObject
         Component[] components = source.GetComponents<Component>();
 

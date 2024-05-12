@@ -29,7 +29,7 @@ public class BeamSpellBehaviour : BasePiercingSpellBehaviour
 
 
 
-        //ComponentCopier.Copy(gameObject, spellElementFlyweightObject);
+        //ComponentCopier.Copy(spellElementFlyweightObject, gameObject);
     }
 
     protected override void CastSpell()

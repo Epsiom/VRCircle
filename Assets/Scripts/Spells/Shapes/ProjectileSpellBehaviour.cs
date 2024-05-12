@@ -28,13 +28,13 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
         
         base.Start();
     }
-
+    
     /// <summary>
     /// Adds the components of the element flyweight prefab to the currently blank projectile (texture, trails.. etc)
     /// </summary>
     public void InitElement(GameObject spellElementFlyweightObject)
     {
-        ComponentCopier.Copy(gameObject, spellElementFlyweightObject);
+        ComponentCopier.Copy(spellElementFlyweightObject, gameObject);
     }
 
     protected override void CastSpell()

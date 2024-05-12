@@ -47,11 +47,13 @@ public static class SpellParser
         {
             case SpellShape.PROJECTILE:
                 ProjectileSpellBehaviour projectileSpellBehaviour = spell.GetComponent<ProjectileSpellBehaviour>();
-                projectileSpellBehaviour.InitElement(spellElementFlyweightObject);
+                GameObject.Instantiate(spellElementFlyweightObject, Vector3.zero, Quaternion.identity, spell.transform);
+                //projectileSpellBehaviour.InitElement(spellElementFlyweightObject);
                 break;
             case SpellShape.BEAM:
                 BeamSpellBehaviour beamSpellBehaviour = spell.GetComponent<BeamSpellBehaviour>();
-                beamSpellBehaviour.InitElement(spellElementFlyweightObject);
+                GameObject.Instantiate(spellElementFlyweightObject, Vector3.zero, Quaternion.identity, spell.transform);
+                //beamSpellBehaviour.InitElement(spellElementFlyweightObject);
                 break;
             case SpellShape.WALL:
                 //TODO
