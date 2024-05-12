@@ -28,8 +28,7 @@ public static class SpellParser
         if (ZF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.BEAM;
         if (ZB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.WALL;
 
-        Debug.Log(spellElement);
-        Debug.Log(spellShape);
+        Debug.Log(spellElement + " " + spellShape);
 
         if (spellShape == SpellShape.UNDEFINED) return null;
 
@@ -51,14 +50,15 @@ public static class SpellParser
                 break;
             case SpellShape.BEAM:
                 BeamSpellBehaviour beamSpellBehaviour = spell.GetComponent<BeamSpellBehaviour>();
-                GameObject.Instantiate(spellElementFlyweightObject, spell.transform.position, spell.transform.rotation, spell.transform);
                 //beamSpellBehaviour.InitElement(spellElementFlyweightObject);
                 break;
             case SpellShape.WALL:
                 //TODO
+                return null;
                 break;
             case SpellShape.SHARDS:
                 //TODO
+                return null;
                 break;
             default:
                 return null;
