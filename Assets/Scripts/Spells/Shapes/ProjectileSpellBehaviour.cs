@@ -12,6 +12,10 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
     private Rigidbody _Rigidbody;
     private Collider _Collider;
 
+    private MeshFilter _MeshFilter;
+    private MeshRenderer _MeshRenderer;
+    private ParticleSystemRenderer _ParticleSystemRenderer;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -20,6 +24,10 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
 
         _Collider = this.GetComponent<Collider>();
         _Collider.enabled = false;
+
+        _MeshFilter = this.GetComponent<MeshFilter>();
+        _MeshRenderer = this.GetComponent<MeshRenderer>();
+        _ParticleSystemRenderer = this.GetComponent<ParticleSystemRenderer>();
 
         this.transform.SetParent(GlobalReferences.Instance.Wand.transform);    //Attaches the spell to the wand until it fires
 
@@ -32,9 +40,13 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
     /// <summary>
     /// Adds the components of the element flyweight prefab to the currently blank projectile (texture, trails.. etc)
     /// </summary>
-    public void InitElement(GameObject spellElementFlyweightObject)
+    public void InitElement(SpellElementFlyweight spellElementFlyweight)
     {
-        ComponentCopier.Copy(spellElementFlyweightObject, gameObject);
+        Debug.Log(spellElementFlyweight.Element);
+        Debug.Log(spellElementFlyweight.PrimaryMesh.name);
+        _MeshFilter.mesh = spellElementFlyweight.PrimaryMesh;
+        _MeshRenderer.materials[0] = spellElementFlyweight.PrimaryMaterial;
+        _ParticleSystemRenderer.material = spellElementFlyweight.PrimaryMaterial;
     }
 
     protected override void CastSpell()
