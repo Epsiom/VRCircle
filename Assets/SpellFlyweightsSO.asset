@@ -23,13 +23,15 @@ MonoBehaviour:
     spellObjectPrefab: {fileID: 0}
   _spellElementFlyweights:
   - Element: 2
-    SpellObjectPrefab: {fileID: -927199367670048503, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
     PrimaryMaterial: {fileID: 2100000, guid: d2785314408210547ba153f5ead30b2a, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: d2785314408210547ba153f5ead30b2a, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: d2785314408210547ba153f5ead30b2a, type: 2}
     PrimaryMesh: {fileID: 4068373912626513877, guid: 7cf3ac7bcd2e5471fb54d5f5da9aad56, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: 4068373912626513877, guid: 7cf3ac7bcd2e5471fb54d5f5da9aad56, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 4068373912626513877, guid: 7cf3ac7bcd2e5471fb54d5f5da9aad56, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 0.5647059, g: 0.36078432, b: 0.18431373, a: 0}
     SecondaryColor: {r: 0.52156866, g: 0.3372549, b: 0.18823531, a: 0}
     TertiaryColor: {r: 0.5137255, g: 0.34901962, b: 0.23137257, a: 0}
@@ -37,13 +39,15 @@ MonoBehaviour:
     GravityMass: 20
     DamageMultiplier: 1
   - Element: 4
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: d5c7abf689a778649a68edf251726fbe, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: d5c7abf689a778649a68edf251726fbe, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: d5c7abf689a778649a68edf251726fbe, type: 2}
     PrimaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 1, g: 0.5254902, b: 0.24705884, a: 0}
     SecondaryColor: {r: 1, g: 0.5019608, b: 0.18039216, a: 0}
     TertiaryColor: {r: 1, g: 0.49411768, b: 0.16862746, a: 0}
@@ -51,13 +55,15 @@ MonoBehaviour:
     GravityMass: 0
     DamageMultiplier: 1
   - Element: 7
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
     PrimaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 0.21176472, g: 0.58431375, b: 0.7803922, a: 0}
     SecondaryColor: {r: 0.18431373, g: 0.56078434, b: 0.75294125, a: 0}
     TertiaryColor: {r: 0.25882354, g: 0.5647059, b: 0.7372549, a: 0}
@@ -65,13 +71,15 @@ MonoBehaviour:
     GravityMass: 0
     DamageMultiplier: 1
   - Element: 3
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
     PrimaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 0.61960787, g: 0.54901963, b: 0.427451, a: 0}
     SecondaryColor: {r: 0.5921569, g: 0.52156866, b: 0.40784317, a: 0}
     TertiaryColor: {r: 0.54509807, g: 0.5019608, b: 0.45098042, a: 0}
@@ -79,13 +87,15 @@ MonoBehaviour:
     GravityMass: 0
     DamageMultiplier: 1
   - Element: 8
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
     PrimaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 2540817853737639666, guid: 080ad8ef2223242198a30df487d9bcbb, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 0.69411767, g: 0.7254902, b: 0.7803922, a: 0}
     SecondaryColor: {r: 0.6627451, g: 0.6901961, b: 0.7372549, a: 0}
     TertiaryColor: {r: 0.6431373, g: 0.67058825, b: 0.70980394, a: 0}
@@ -93,13 +103,15 @@ MonoBehaviour:
     GravityMass: 0
     DamageMultiplier: 1
   - Element: 1
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
     PrimaryMesh: {fileID: 1865056248366311061, guid: 9a13b94cace2a4d78ac94a0ed0a88843, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: 1865056248366311061, guid: 9a13b94cace2a4d78ac94a0ed0a88843, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 1865056248366311061, guid: 9a13b94cace2a4d78ac94a0ed0a88843, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 1, g: 1, b: 0.43137258, a: 0}
     SecondaryColor: {r: 1, g: 1, b: 0.40000004, a: 0}
     TertiaryColor: {r: 1, g: 1, b: 0.52156866, a: 0}
@@ -107,13 +119,15 @@ MonoBehaviour:
     GravityMass: 0
     DamageMultiplier: 1
   - Element: 6
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
     PrimaryMesh: {fileID: -5076798556035486163, guid: bf65382e5e6d14e7f8140e4204ce07e2, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: -5076798556035486163, guid: bf65382e5e6d14e7f8140e4204ce07e2, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: -5076798556035486163, guid: bf65382e5e6d14e7f8140e4204ce07e2, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 0.54509807, g: 1, b: 1, a: 0}
     SecondaryColor: {r: 0.52156866, g: 0.9803922, b: 1, a: 0}
     TertiaryColor: {r: 0.6, g: 0.9803922, b: 1, a: 0}
@@ -121,13 +135,15 @@ MonoBehaviour:
     GravityMass: 0
     DamageMultiplier: 1
   - Element: 9
-    SpellObjectPrefab: {fileID: 0}
     PrimaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
     PrimaryMesh: {fileID: -5076798556035486163, guid: 759e8ecdd66ef614b844d0f68de1f901, type: 3}
+    PrimaryMeshScale: 1
     SecondaryMesh: {fileID: -5076798556035486163, guid: 759e8ecdd66ef614b844d0f68de1f901, type: 3}
+    SecondaryMeshScale: 1
     TertiaryMesh: {fileID: -5076798556035486163, guid: 759e8ecdd66ef614b844d0f68de1f901, type: 3}
+    TertiaryMeshScale: 1
     PrimaryColor: {r: 0.75294125, g: 0.5764706, b: 1, a: 0}
     SecondaryColor: {r: 0.73333335, g: 0.5647059, b: 1, a: 0}
     TertiaryColor: {r: 0.7490196, g: 0.63529414, b: 1, a: 0}

@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 178472435}
   - component: {fileID: 178472434}
   - component: {fileID: 178472433}
+  - component: {fileID: 178472436}
   m_Layer: 0
   m_Name: PlayerArea
   m_TagString: Untagged
@@ -274,7 +275,7 @@ MonoBehaviour:
   - Assets/Materials/StartingArea.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_65b24498-d849-45e0-9d3e-0c34d47c3820
+    name: UM_OperatedMesh_737cf5d2-bde3-4042-8c50-50f9bd940fea
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: a6ab03f46371b4848acfd6effdd660cd, type: 2}
     buidVersion:
@@ -289,7 +290,7 @@ MonoBehaviour:
     modifierList: []
     currentIndex: -1
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: 65b24498-d849-45e0-9d3e-0c34d47c3820
+  sourceMeshRendererGUID: 737cf5d2-bde3-4042-8c50-50f9bd940fea
   guid: a7fecbee-d1c1-4efe-bff9-8b8c35c03461
   localOptions:
     RecalculateTangents: 0
@@ -301,6 +302,28 @@ MonoBehaviour:
   <IsDirtySaveData>k__BackingField: 0
   texturepaintdata:
   - {fileID: 0}
+--- !u!64 &178472436
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178472431}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: a6ab03f46371b4848acfd6effdd660cd, type: 2}
 --- !u!1 &299639867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,7 +1845,7 @@ MonoBehaviour:
   - Packages/com.tripolygon.umodeler-x/Resources/Materials/UModelerX_Gray_URP.mat
   currentMaterialIndex: 0
   renderableMesh:
-    name: UM_OperatedMesh_b7601988-ca4c-4b46-8b73-ede0ed9cb9dc
+    name: UM_OperatedMesh_6c9f50e5-6e85-4445-8d40-531b7def8c8f
     skinnedMesh: 0
     sharedMesh: {fileID: 4300000, guid: e03275e2149ce8e489097d00cb20f988, type: 2}
     buidVersion:
@@ -1837,7 +1860,7 @@ MonoBehaviour:
     modifierList: []
     currentIndex: -1
   sourceMesh: {fileID: 0}
-  sourceMeshRendererGUID: b7601988-ca4c-4b46-8b73-ede0ed9cb9dc
+  sourceMeshRendererGUID: 6c9f50e5-6e85-4445-8d40-531b7def8c8f
   guid: 7408abb3-4e1e-451f-8da1-05fd747aab26
   localOptions:
     RecalculateTangents: 0

@@ -12,15 +12,18 @@ public class SpellElementFlyweight
     [SerializeField] public Material TertiaryMaterial;
 
     [SerializeField] public Mesh PrimaryMesh;
+    [SerializeField] public float PrimaryMeshScale = 1f;
     [SerializeField] public Mesh SecondaryMesh;
+    [SerializeField] public float SecondaryMeshScale = 1f;
     [SerializeField] public Mesh TertiaryMesh;
+    [SerializeField] public float TertiaryMeshScale = 1f;
 
     [SerializeField] public Color PrimaryColor;
     [SerializeField] public Color SecondaryColor;
     [SerializeField] public Color TertiaryColor;
 
     [SerializeField] public bool IsWithGravity;
-    [SerializeField] public float GravityMass;
+    [SerializeField] public float GravityMass = 1f;
 
-    [SerializeField] public float DamageMultiplier;
+    [SerializeField] public float DamageMultiplier = 1f;
 }
