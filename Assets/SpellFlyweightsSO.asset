@@ -27,7 +27,7 @@ MonoBehaviour:
     SecondaryMaterial: {fileID: 2100000, guid: d2785314408210547ba153f5ead30b2a, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: d2785314408210547ba153f5ead30b2a, type: 2}
     PrimaryMesh: {fileID: -5495902117074765545, guid: d509836ba1988824c885363a29b8a77a, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: -5495902117074765545, guid: d509836ba1988824c885363a29b8a77a, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: -5495902117074765545, guid: d509836ba1988824c885363a29b8a77a, type: 3}
@@ -36,14 +36,14 @@ MonoBehaviour:
     SecondaryColor: {r: 0.52156866, g: 0.3372549, b: 0.18823531, a: 0}
     TertiaryColor: {r: 0.5137255, g: 0.34901962, b: 0.23137257, a: 0}
     IsWithGravity: 1
-    GravityMass: 20
+    ProjectileSpeed: 15
     DamageMultiplier: 1
   - Element: 4
     PrimaryMaterial: {fileID: 2100000, guid: d5c7abf689a778649a68edf251726fbe, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: d5c7abf689a778649a68edf251726fbe, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: d5c7abf689a778649a68edf251726fbe, type: 2}
     PrimaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
@@ -52,14 +52,14 @@ MonoBehaviour:
     SecondaryColor: {r: 1, g: 0.5019608, b: 0.18039216, a: 0}
     TertiaryColor: {r: 1, g: 0.49411768, b: 0.16862746, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1
   - Element: 7
     PrimaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
     PrimaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
@@ -68,14 +68,14 @@ MonoBehaviour:
     SecondaryColor: {r: 0.18431373, g: 0.56078434, b: 0.75294125, a: 0}
     TertiaryColor: {r: 0.25882354, g: 0.5647059, b: 0.7372549, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1
   - Element: 3
     PrimaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
     PrimaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
@@ -84,14 +84,14 @@ MonoBehaviour:
     SecondaryColor: {r: 0.5921569, g: 0.52156866, b: 0.40784317, a: 0}
     TertiaryColor: {r: 0.54509807, g: 0.5019608, b: 0.45098042, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1
   - Element: 8
     PrimaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
     PrimaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
@@ -100,14 +100,14 @@ MonoBehaviour:
     SecondaryColor: {r: 0.6627451, g: 0.6901961, b: 0.7372549, a: 0}
     TertiaryColor: {r: 0.6431373, g: 0.67058825, b: 0.70980394, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1
   - Element: 1
     PrimaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
     PrimaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
@@ -116,14 +116,14 @@ MonoBehaviour:
     SecondaryColor: {r: 1, g: 1, b: 0.40000004, a: 0}
     TertiaryColor: {r: 1, g: 1, b: 0.52156866, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1
   - Element: 6
     PrimaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
     PrimaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 289301614986012343, guid: 3068b58ea277bdb4bb234ff88f53a428, type: 3}
@@ -132,14 +132,14 @@ MonoBehaviour:
     SecondaryColor: {r: 0.52156866, g: 0.9803922, b: 1, a: 0}
     TertiaryColor: {r: 0.6, g: 0.9803922, b: 1, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1
   - Element: 9
     PrimaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
     SecondaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
     TertiaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
     PrimaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
-    PrimaryMeshScale: 1
+    PrimaryMeshScale: 0.15
     SecondaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
     SecondaryMeshScale: 1
     TertiaryMesh: {fileID: 4711208715938537054, guid: 7ab1f03f7bd71864bab48afcdbf89d38, type: 3}
@@ -148,5 +148,5 @@ MonoBehaviour:
     SecondaryColor: {r: 0.73333335, g: 0.5647059, b: 1, a: 0}
     TertiaryColor: {r: 0.7490196, g: 0.63529414, b: 1, a: 0}
     IsWithGravity: 0
-    GravityMass: 0
+    ProjectileSpeed: 50
     DamageMultiplier: 1

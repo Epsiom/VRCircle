@@ -12,6 +12,8 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
     private Rigidbody _Rigidbody;
     private Collider _Collider;
 
+    private bool _isWithGravity = false;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -41,6 +43,9 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
         meshFilter.mesh = spellElementFlyweight.PrimaryMesh;
         meshRenderer.material = spellElementFlyweight.PrimaryMaterial;
         particleSystemRenderer.material = spellElementFlyweight.PrimaryMaterial;
+        _isWithGravity = spellElementFlyweight.IsWithGravity;
+        FinalScale = spellElementFlyweight.PrimaryMeshScale;
+        ProjectileSpeed = spellElementFlyweight.ProjectileSpeed;
     }
 
     protected override void CastSpell()
@@ -51,5 +56,6 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
         Vector3 directionVector = (this.transform.position - GlobalReferences.Instance.Wand.position);   // The direction from the wand to the spell's position
         directionVector.Normalize();
         _Rigidbody.velocity = directionVector * ProjectileSpeed;
+        _Rigidbody.useGravity = _isWithGravity;
     }
 }

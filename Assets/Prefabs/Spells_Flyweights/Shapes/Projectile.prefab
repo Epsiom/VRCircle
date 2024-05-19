@@ -4878,7 +4878,7 @@ MonoBehaviour:
   CastCountdownTimer: 1
   ProjectileSpeed: 50
   InitialScale: 0.01
-  FinalScale: 1.0000005
+  FinalScale: 1
 --- !u!199 &429822658644631767
 ParticleSystemRenderer:
   serializedVersion: 6

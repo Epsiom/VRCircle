@@ -24,8 +24,8 @@ public static class SpellParser
         string spellShapeStr = spellString.Substring(0, 3);
         SpellShape spellShape = SpellShape.UNDEFINED;
         if (QCF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.PROJECTILE;
-        if (QCB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.SHARDS;
-        if (ZF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.BEAM;
+        if (QCB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.BEAM;
+        if (ZF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.SHARDS;
         if (ZB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.WALL;
 
         Debug.Log(spellElement + " " + spellShape);

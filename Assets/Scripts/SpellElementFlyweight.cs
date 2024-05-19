@@ -23,7 +23,7 @@ public class SpellElementFlyweight
     [SerializeField] public Color TertiaryColor;
 
     [SerializeField] public bool IsWithGravity;
-    [SerializeField] public float GravityMass = 1f;
+    [SerializeField] public float ProjectileSpeed = 50f;
 
     [SerializeField] public float DamageMultiplier = 1f;
 }
