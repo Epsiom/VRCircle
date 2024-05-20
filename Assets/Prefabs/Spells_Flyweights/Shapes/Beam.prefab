@@ -61,7 +61,7 @@ VisualEffect:
       m_Array:
       - m_Value: {x: 50, y: 17, z: 9, w: 0}
         m_Name: CoreColor
-        m_Overridden: 0
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:
@@ -133,6 +133,8 @@ MonoBehaviour:
     m_Bits: 64
   _SpellDamage: 1
   CastCountdownTimer: 1
+  BeamStartupDuration: 1
+  BeamActiveDuration: 1
 --- !u!136 &3001297016323840990
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -152,7 +154,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Height: 20
+  m_Radius: 0.1
+  m_Height: 70
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 10}
+  m_Center: {x: 0, y: 0, z: 35}

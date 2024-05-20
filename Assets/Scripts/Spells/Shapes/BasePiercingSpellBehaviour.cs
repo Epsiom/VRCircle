@@ -39,13 +39,6 @@ public abstract class BasePiercingSpellBehaviour : MonoBehaviour
             _Collider.radius, // Radius of the capsule
             TargetLayer
         );
-        /*
-        Collider[] colliders = Physics.OverlapBox(
-            _Collider.bounds.center, // Center of your collider
-            _Collider.bounds.extents, // Half extents of your collider
-            _Collider.transform.rotation,
-            TargetLayer
-        );*/
         foreach (Collider enemyCollider in colliders)
         {
             BaseEnemyBehaviour enemy = enemyCollider.gameObject.GetComponent<BaseEnemyBehaviour>();

@@ -49,7 +49,7 @@ public static class SpellParser
                 break;
             case SpellShape.BEAM:
                 BeamSpellBehaviour beamSpellBehaviour = spell.GetComponent<BeamSpellBehaviour>();
-                //beamSpellBehaviour.InitElement(spellElementFlyweightObject);
+                beamSpellBehaviour.InitElement(spellElementFlyweight);
                 break;
             /*case SpellShape.WALL:
                 //TODO
