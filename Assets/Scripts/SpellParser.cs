@@ -40,7 +40,11 @@ public static class SpellParser
         GameObject spellShapeFlyweightObject = GlobalReferences.Instance.SpellFlyweightsSO.getShapeFlyweight(spellShape).spellObjectPrefab;
         SpellElementFlyweight spellElementFlyweight = GlobalReferences.Instance.SpellFlyweightsSO.getElementFlyweight(spellElement);
 
-        GameObject spell = GameObject.Instantiate(spellShapeFlyweightObject, GlobalReferences.Instance.SpellSpawningPoint.position, GlobalReferences.Instance.SpellSpawningPoint.rotation, null);
+        GameObject spell = GameObject.Instantiate(
+            spellShapeFlyweightObject,
+            GlobalReferences.Instance.SpellSpawningPoint.position,
+            GlobalReferences.Instance.SpellSpawningPoint.rotation,
+            null);
         switch (spellShape)
         {
             case SpellShape.PROJECTILE:
@@ -51,13 +55,13 @@ public static class SpellParser
                 BeamSpellBehaviour beamSpellBehaviour = spell.GetComponent<BeamSpellBehaviour>();
                 beamSpellBehaviour.InitElement(spellElementFlyweight);
                 break;
+            case SpellShape.SHARDS:
+                GameObject projectileSpellShapeFlyweightObject = GlobalReferences.Instance.SpellFlyweightsSO.getShapeFlyweight(SpellShape.PROJECTILE).spellObjectPrefab;
+                ShardsBehaviour shardsSpellBehaviour = spell.GetComponent<ShardsBehaviour>();
+                shardsSpellBehaviour.Init(spellElementFlyweight, projectileSpellShapeFlyweightObject);
+                break;
             /*case SpellShape.WALL:
                 //TODO
-                return null;
-                break;
-            case SpellShape.SHARDS:
-                //TODO
-                return null;
                 break;*/
             default:
                 return null;

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7716244083975479376}
   - component: {fileID: 461142320382137442}
   - component: {fileID: 429822658644631767}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4824,7 +4824,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -4877,6 +4877,7 @@ MonoBehaviour:
   _SpellDamage: 1
   CastCountdownTimer: 1
   ProjectileSpeed: 50
+  ProjectileDeviationAngle: 0
   InitialScale: 0.01
   FinalScale: 1
 --- !u!199 &429822658644631767

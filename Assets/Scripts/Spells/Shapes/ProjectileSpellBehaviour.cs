@@ -6,6 +6,7 @@ using DG.Tweening;
 public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
 {
     public float ProjectileSpeed = 50f;
+    public float ProjectileDeviationAngle = 0f;
     public float InitialScale = 0.0015f;    // Initial scale of the spell's GameObject when first instanciated, after which it grows to FinalScale
     public float FinalScale = 0.15f;        // Final scale of the spell's GameObject, reached just before its cast and leaves the wand
 
@@ -55,7 +56,16 @@ public class ProjectileSpellBehaviour : BaseSolidSpellBehaviour
 
         Vector3 directionVector = (this.transform.position - GlobalReferences.Instance.Wand.position);   // The direction from the wand to the spell's position
         directionVector.Normalize();
-        _Rigidbody.velocity = directionVector * ProjectileSpeed;
+
+        if (ProjectileDeviationAngle > 0)
+        {
+            Quaternion deviationRotation = Quaternion.Euler(Random.Range(-ProjectileDeviationAngle, ProjectileDeviationAngle), Random.Range(-ProjectileDeviationAngle, ProjectileDeviationAngle), 0);
+            _Rigidbody.velocity = deviationRotation * directionVector * ProjectileSpeed;
+        }
+        else
+        {
+            _Rigidbody.velocity = directionVector * ProjectileSpeed;
+        }
         _Rigidbody.useGravity = _isWithGravity;
     }
 }

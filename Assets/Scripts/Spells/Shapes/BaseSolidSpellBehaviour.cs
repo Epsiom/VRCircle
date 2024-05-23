@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,10 @@ using UnityEngine;
 /// </summary>
 public abstract class BaseSolidSpellBehaviour : MonoBehaviour
 {
+    [SerializeField] public float CastCountdownTimer = 1f;               // Time in seconds after which the spell is cast
+    [SerializeField] public float SpellDestructionTimer = 5f;            // Time in seconds after which the casted spell is destroyed
+    [SerializeField] public float SpellDestructionProcessTimer = 0.25f;  // Time in seconds taken to shrink then destroy the spell
+
     [SerializeField]
     [Tooltip("The layer of the enemy characters")]
     protected LayerMask TargetLayer;
@@ -16,14 +21,12 @@ public abstract class BaseSolidSpellBehaviour : MonoBehaviour
     [Tooltip("The damage delt by the spell")]
     protected int _SpellDamage = 1;
 
-    [SerializeField] protected float CastCountdownTimer = 1f; // Time in seconds after which the spell is cast
-    //protected bool _IsSpellCast = false;
-
     protected abstract void CastSpell();
 
     protected virtual void Start()
     {
         Invoke(nameof(CastSpell), CastCountdownTimer);
+        Invoke(nameof(StartSpellDestruction), CastCountdownTimer + SpellDestructionTimer);
     }
 
     protected virtual void OnCollisionEnter(Collision collision)
@@ -50,4 +53,16 @@ public abstract class BaseSolidSpellBehaviour : MonoBehaviour
         Destroy(this.gameObject);
     }
     */
+
+    private void StartSpellDestruction()
+    {
+        this.transform.DOScale(Vector3.zero, SpellDestructionProcessTimer);
+        //Destroy(this.gameObject, SpellDestructionProcessTimer);
+        Invoke(nameof(DestroySpell), SpellDestructionProcessTimer);
+    }
+    private void DestroySpell()
+    {
+        DOTween.KillAll();
+        Destroy(this.gameObject);
+    }
 }

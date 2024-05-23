@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8597952988634032192}
   - component: {fileID: 5584039000097459676}
   - component: {fileID: 3001297016323840990}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0

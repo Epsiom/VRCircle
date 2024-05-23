@@ -16,7 +16,7 @@ MonoBehaviour:
   - shape: 1
     spellObjectPrefab: {fileID: 4374230922530632379, guid: b395b3f8bf30edc4c89637f3902739cf, type: 3}
   - shape: 2
-    spellObjectPrefab: {fileID: 0}
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: 202966f073653594cafc219109e087b0, type: 3}
   - shape: 3
     spellObjectPrefab: {fileID: 8310964603947034449, guid: 5854b316d11773e4894be973c7b5ca9f, type: 3}
   - shape: 4
@@ -52,7 +52,7 @@ MonoBehaviour:
     SecondaryColor: {r: 1, g: 0.5019608, b: 0.18039216, a: 0}
     TertiaryColor: {r: 1, g: 0.49411768, b: 0.16862746, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
   - Element: 7
     PrimaryMaterial: {fileID: 2100000, guid: 18d5cf5877090004e9f6be2b59cf4d19, type: 2}
@@ -68,7 +68,7 @@ MonoBehaviour:
     SecondaryColor: {r: 0.18431373, g: 0.56078434, b: 0.75294125, a: 0}
     TertiaryColor: {r: 0.25882354, g: 0.5647059, b: 0.7372549, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
   - Element: 3
     PrimaryMaterial: {fileID: 2100000, guid: 0a91b44bf44d8684d8232c6726b92bd6, type: 2}
@@ -84,7 +84,7 @@ MonoBehaviour:
     SecondaryColor: {r: 0.5921569, g: 0.52156866, b: 0.40784317, a: 0}
     TertiaryColor: {r: 0.54509807, g: 0.5019608, b: 0.45098042, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
   - Element: 8
     PrimaryMaterial: {fileID: 2100000, guid: 20bc199b045747d468c28f8eaf7d7681, type: 2}
@@ -100,7 +100,7 @@ MonoBehaviour:
     SecondaryColor: {r: 0.6627451, g: 0.6901961, b: 0.7372549, a: 0}
     TertiaryColor: {r: 0.6431373, g: 0.67058825, b: 0.70980394, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
   - Element: 1
     PrimaryMaterial: {fileID: 2100000, guid: 804f11a37f0f35148890ff58155476aa, type: 2}
@@ -116,7 +116,7 @@ MonoBehaviour:
     SecondaryColor: {r: 1, g: 1, b: 0.40000004, a: 0}
     TertiaryColor: {r: 1, g: 1, b: 0.52156866, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
   - Element: 6
     PrimaryMaterial: {fileID: 2100000, guid: 4ab3f782d5e785d488b641b7a9018d57, type: 2}
@@ -132,7 +132,7 @@ MonoBehaviour:
     SecondaryColor: {r: 0.52156866, g: 0.9803922, b: 1, a: 0}
     TertiaryColor: {r: 0.6, g: 0.9803922, b: 1, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
   - Element: 9
     PrimaryMaterial: {fileID: 2100000, guid: 5c6190a608317ce4ab528877aa80c5ee, type: 2}
@@ -148,5 +148,5 @@ MonoBehaviour:
     SecondaryColor: {r: 0.73333335, g: 0.5647059, b: 1, a: 0}
     TertiaryColor: {r: 0.7490196, g: 0.63529414, b: 1, a: 0}
     IsWithGravity: 0
-    ProjectileSpeed: 50
+    ProjectileSpeed: 25
     DamageMultiplier: 1
