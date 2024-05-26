@@ -20,7 +20,7 @@ MonoBehaviour:
   - shape: 3
     spellObjectPrefab: {fileID: 8310964603947034449, guid: 5854b316d11773e4894be973c7b5ca9f, type: 3}
   - shape: 4
-    spellObjectPrefab: {fileID: 0}
+    spellObjectPrefab: {fileID: 4374230922530632379, guid: fed9d3144893e6e40b80651b0ac6cdc2, type: 3}
   _spellElementFlyweights:
   - Element: 2
     PrimaryMaterial: {fileID: 2100000, guid: d2785314408210547ba153f5ead30b2a, type: 2}

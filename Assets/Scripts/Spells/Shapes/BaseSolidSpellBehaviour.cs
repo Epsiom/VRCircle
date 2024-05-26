@@ -40,7 +40,7 @@ public abstract class BaseSolidSpellBehaviour : MonoBehaviour
                 return;
             }
             baseCharacterBehaviour.DamageHealth(_SpellDamage);
-            Destroy(this.gameObject);
+            DestroySpell();
         }
     }
 
@@ -57,7 +57,6 @@ public abstract class BaseSolidSpellBehaviour : MonoBehaviour
     private void StartSpellDestruction()
     {
         this.transform.DOScale(Vector3.zero, SpellDestructionProcessTimer);
-        //Destroy(this.gameObject, SpellDestructionProcessTimer);
         Invoke(nameof(DestroySpell), SpellDestructionProcessTimer);
     }
     private void DestroySpell()

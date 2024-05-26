@@ -40,7 +40,7 @@ public class BeamSpellBehaviour : BasePiercingSpellBehaviour
     }
 
     /// <summary>
-    /// Starts the beam collision, to sync up with
+    /// Starts the beam collision, to sync up with the vfx visuals
     /// </summary>
     private void StartBeamActiveState()
     {

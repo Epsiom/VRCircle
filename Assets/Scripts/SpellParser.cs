@@ -26,7 +26,7 @@ public static class SpellParser
         if (QCF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.PROJECTILE;
         if (QCB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.BEAM;
         if (ZF_LIST.Contains(spellShapeStr)) spellShape = SpellShape.SHARDS;
-        if (ZB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.WALL;
+        if (ZB_LIST.Contains(spellShapeStr)) spellShape = SpellShape.AURA;
 
         Debug.Log(spellElement + " " + spellShape);
 
@@ -60,9 +60,10 @@ public static class SpellParser
                 ShardsBehaviour shardsSpellBehaviour = spell.GetComponent<ShardsBehaviour>();
                 shardsSpellBehaviour.Init(spellElementFlyweight, projectileSpellShapeFlyweightObject);
                 break;
-            /*case SpellShape.WALL:
-                //TODO
-                break;*/
+            case SpellShape.AURA:
+                AuraSpellBehaviour auraSpellBehaviour = spell.GetComponent<AuraSpellBehaviour>();
+                auraSpellBehaviour.InitElement(spellElementFlyweight);
+                break;
             default:
                 return null;
         }
