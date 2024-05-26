@@ -24,8 +24,7 @@ public class AuraSpellBehaviour : BasePiercingSpellBehaviour
         _Rigidbody = this.GetComponent<Rigidbody>();
         //_Rigidbody.excludeLayers = 1 << GlobalReferences.Instance.Player      // TODO: and the wand..?
 
-        _Collider = this.GetComponent<Collider>();
-        _Collider.enabled = false;
+        _IsSpellActive = false;
 
         this.transform.SetParent(GlobalReferences.Instance.Wand.transform);    //Attaches the spell to the wand until it fires
 
@@ -55,7 +54,7 @@ public class AuraSpellBehaviour : BasePiercingSpellBehaviour
     protected override void CastSpell()
     {
         this.transform.SetParent(null);
-        _Collider.enabled = true;
+        _IsSpellActive = true;
 
         Vector3 directionVector = (this.transform.position - GlobalReferences.Instance.Wand.position);   // The direction from the wand to the spell's position
         directionVector.Normalize();
@@ -90,7 +89,7 @@ public class AuraSpellBehaviour : BasePiercingSpellBehaviour
     }
     private void DestroySpell()
     {
-        DOTween.KillAll();
+        DOTween.Kill(gameObject);
         Destroy(this.gameObject);
     }
 }

@@ -61,7 +61,7 @@ public abstract class BaseSolidSpellBehaviour : MonoBehaviour
     }
     private void DestroySpell()
     {
-        DOTween.KillAll();
+        DOTween.Kill(gameObject);
         Destroy(this.gameObject);
     }
 }

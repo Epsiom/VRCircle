@@ -16,7 +16,6 @@ public class BeamSpellBehaviour : BasePiercingSpellBehaviour
     {
         CastCountdownTimer = 0f;                                               // The beam growing in size is handled by the vfx
         base.Start();
-        _Collider.enabled = false;
         this.transform.SetParent(GlobalReferences.Instance.Wand.transform);    //Attaches the spell to the wand
     }
 
@@ -30,10 +29,12 @@ public class BeamSpellBehaviour : BasePiercingSpellBehaviour
     }
 
     /// <summary>
-    /// Starts the beam VFX
+    /// Starts the beam VFX (the beam is slim, and does not inflict damage yet as long as it is in its startup duration)
     /// </summary>
     protected override void CastSpell()
     {
+        //TODO: move to the Start(), and use CastCountdownTimer instead of BeamStartupDuration
+
         transform.localRotation = Quaternion.Euler(-90f, 0f, 0f);
         _visualEffect.Play();
         Invoke(nameof(StartBeamActiveState), BeamStartupDuration);
@@ -44,13 +45,13 @@ public class BeamSpellBehaviour : BasePiercingSpellBehaviour
     /// </summary>
     private void StartBeamActiveState()
     {
-        _Collider.enabled = true;
+        _IsSpellActive = true;
         Invoke(nameof(EndBeamActiveState), BeamActiveDuration);
     }
 
     private void EndBeamActiveState()
     {
-        _Collider.enabled = false;
+        _IsSpellActive = false;
         Destroy(this.gameObject);
     }
 }
