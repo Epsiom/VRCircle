@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ShardsBehaviour : MonoBehaviour
 {
-    //TODO: instantiate 10 projectiles with 1 second of lifetime (ajouter un invoke sur ProjectileBehaviour) and 20 degrees of deviation
-    //TODO: Add 5 seconds of lifetime on every projectile spell as a safety in ProjectileBehaviour
-
     [SerializeField]
     [Tooltip("The damage delt by the spell")]
     protected int _SpellQuantity = 8;
@@ -24,7 +21,7 @@ public class ShardsBehaviour : MonoBehaviour
             projectileSpellBehaviour.InitElement(spellElementFlyweight);
 
             projectileSpellBehaviour.ProjectileDeviationAngle = 7.5f;
-            projectileSpellBehaviour.SpellDestructionTimer = 0.1f;
+            projectileSpellBehaviour.SpellDestructionTimer = 0.25f;
             projectileSpellBehaviour.SpellDestructionProcessTimer = 0.05f;
             projectileSpellBehaviour.ProjectileSpeed *= 2;
             projectileSpellBehaviour.InitialScale /= 2;

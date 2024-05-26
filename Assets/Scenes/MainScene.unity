@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wand_Numpad
       objectReference: {fileID: 0}
+    - target: {fileID: 3412903253308581747, guid: f97817325c092a54680a0088662759c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7391126235933099061, guid: f97817325c092a54680a0088662759c4, type: 3}
       propertyPath: m_SizeDelta.x
       value: 5
