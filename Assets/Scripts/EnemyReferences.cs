@@ -7,6 +7,12 @@ using UnityEngine;
 /// </summary>
 public class EnemyReferences : MonoBehaviour
 {
+    [Header("ENEMY PREFABS:")]
+    [Tooltip("The default enemy")]
+    public GameObject DefaultEnemy;
+
+    [Header("ENEMY INSTANCE LIST:")]
+    [Tooltip("The list of all currently alive enemies")]
     public List<GameObject> Enemies = new List<GameObject>();
 
     /// <summary>

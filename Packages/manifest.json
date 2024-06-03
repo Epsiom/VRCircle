@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.tripolygon.umodeler-x": "file:com.tripolygon.umodeler-x-0.19.16/com.tripolygon.umodeler-x-0.19.16.tgz",
+    "com.tripolygon.umodeler-x": "file:com.tripolygon.umodeler-x-0.19.17/com.tripolygon.umodeler-x-0.19.17.tgz",
     "com.unity.collab-proxy": "2.1.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.feature.vr": "1.0.0",
