@@ -197,8 +197,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1553861437591726598}
   - {fileID: 5980423937107731198}
+  - {fileID: 1553861437591726598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4219462149060215765
@@ -213,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0240e0e7c590a448a52a2174eeb9f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InnerRing: {fileID: 6877985090696200148}
-  _OuterRing: {fileID: 5928867000496824041}
+  _OuterRing: {fileID: 6877985090696200148}
+  _InnerRing: {fileID: 5928867000496824041}
   _EnemyPrefabToSpawn: {fileID: 6500800842562642357, guid: f48fd821106aafc4691318d073a2d1b1, type: 3}
   SpawnDelay: 6
   _PathToPlayer:

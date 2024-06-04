@@ -26,6 +26,7 @@ public class BeamSpellBehaviour : BasePiercingSpellBehaviour
     {
         _visualEffect = GetComponent<VisualEffect>();
         _visualEffect.SetVector4("CoreColor", spellElementFlyweight.PrimaryColor);
+        _visualEffect.SetMesh("OriginSpinnerMesh", spellElementFlyweight.PrimaryMesh);
     }
 
     /// <summary>

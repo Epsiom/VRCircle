@@ -6,8 +6,8 @@ using UnityEngine.Splines;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
-    [SerializeField] private GameObject _InnerRing;
     [SerializeField] private GameObject _OuterRing;
+    [SerializeField] private GameObject _InnerRing;
 
     [SerializeField] private GameObject _EnemyPrefabToSpawn;
 
@@ -29,8 +29,8 @@ public class SpawnerBehaviour : MonoBehaviour
 
         Vector3 InnerRingRotation = new Vector3(180f, 0f, 0f);
         Vector3 OuterRingRotation = new Vector3(90f, 180f, 0f);
-        _InnerRing.transform.DORotate(InnerRingRotation, 2f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
-        _OuterRing.transform.DORotate(OuterRingRotation, 3f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
+        _OuterRing.transform.DORotate(InnerRingRotation, 2f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
+        _InnerRing.transform.DORotate(OuterRingRotation, 3f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
 
         SpawnCountdown = SpawnDelay;
     }

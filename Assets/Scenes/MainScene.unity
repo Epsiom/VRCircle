@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3412903253308581747, guid: f97817325c092a54680a0088662759c4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7391126235933099061, guid: f97817325c092a54680a0088662759c4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -864,7 +864,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1125652051673745596, guid: f97817325c092a54680a0088662759c4, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2779420813828389598, guid: f97817325c092a54680a0088662759c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f97817325c092a54680a0088662759c4, type: 3}
 --- !u!1001 &1030559060
 PrefabInstance:
@@ -1204,7 +1207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1959133458
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,6 +1278,22 @@ PrefabInstance:
     - target: {fileID: 25073276994497161, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553861437591726598, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553861437591726598, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553861437591726598, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553861437591726598, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8569962880870579199, guid: a70dd698a1d3cc64caf63be96d9b17a5, type: 3}
       propertyPath: m_Name
