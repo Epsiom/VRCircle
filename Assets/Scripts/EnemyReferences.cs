@@ -8,8 +8,8 @@ using UnityEngine;
 public class EnemyReferences : MonoBehaviour
 {
     [Header("ENEMY PREFABS:")]
-    [Tooltip("The default enemy")]
-    public GameObject DefaultEnemy;
+    [Tooltip("The prefab for spawners")]
+    public GameObject SpawnerPrefab;
 
     [Header("ENEMY INSTANCE LIST:")]
     [Tooltip("The list of all currently alive enemies")]
@@ -28,9 +28,18 @@ public class EnemyReferences : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Called by any killed enemy
+    /// </summary>
     public void RemoveEnemyReference(GameObject enemyGameobject)
     {
         Enemies.Remove(enemyGameobject);
+
+        // If all enemies are killed, we inform the wave system class
+        if (Enemies.Count == 0)
+        {
+            WaveHandler.Instance.LastEnemyKilled();
+        }
     }
 
     /// <summary>

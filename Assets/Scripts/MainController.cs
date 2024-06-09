@@ -11,8 +11,6 @@ public class MainController : MonoBehaviour
     [Tooltip("The player's health")]
     public int PlayerHealth;
 
-    public WaveHandler WaveHandler = new WaveHandler();
-
     private const int PLAYER_STARTING_HEALTH = 3;
 
     private void Start()

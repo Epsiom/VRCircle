@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -10,6 +11,10 @@ public class GlobalReferences : MonoBehaviour
     [Header("SCRIPTABLE OBJECTS:")]
     [Tooltip("The flyweight prefabs for the shapes and elements of the spells")]
     public SpellFlyweightsSO SpellFlyweightsSO;
+
+    [Header("ARENA:")]
+    [Tooltip("The wave countdown timer")]
+    public TextMeshPro WaveTimerTMP;
 
     [Header("PLAYER:")]
     [Tooltip("The player : XR Origin (XR Rig)")]
