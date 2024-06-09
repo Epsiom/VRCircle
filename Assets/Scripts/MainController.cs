@@ -11,12 +11,27 @@ public class MainController : MonoBehaviour
     [Tooltip("The player's health")]
     public int PlayerHealth;
 
-    private const int PLAYER_STARTING_HEALTH = 3;
+    private const int PLAYER_STARTING_HEALTH = 1;
 
     private void Start()
     {
+        PrepareForWaveStart();
+    }
+
+    public void PrepareForWaveStart()
+    {
         PlayerHealth = PLAYER_STARTING_HEALTH;
     }
+
+    public void DamagePlayer()
+    {
+        PlayerHealth--;
+        if (PlayerHealth <= 0)
+        {
+            WaveHandler.Instance.GameOver();
+        }
+    }
+
 
     // --- Singleton management ---
 

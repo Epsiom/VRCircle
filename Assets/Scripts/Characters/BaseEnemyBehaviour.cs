@@ -21,4 +21,14 @@ public class BaseEnemyBehaviour : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    /// <summary>
+    /// Called on contact with the player
+    /// </summary>
+    protected void DamagePlayer()
+    {
+        MainController.Instance.DamagePlayer();
+        EnemyReferences.Instance.RemoveEnemyReference(this.gameObject);
+        Destroy(this.gameObject);
+    }
 }

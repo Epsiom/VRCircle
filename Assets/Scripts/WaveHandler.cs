@@ -7,13 +7,13 @@ using UnityEngine;
 public class WaveHandler : MonoBehaviour
 {
     // Timer variables
-    private const float WAVE_DURATION = 15f; 
+    private const float WAVE_DURATION = 30f; 
     private float _WaveCountdownTimer = 0f;
 
     // Wave variables
     //private float RemainingWaveTime;
     private bool _IsWaveInProgress = false;
-    private List<SpawnerBehaviour> spawnerBehaviourList = new List<SpawnerBehaviour>();
+    public List<SpawnerBehaviour> spawnerBehaviourList = new List<SpawnerBehaviour>();
 
     // Spawner procedural instantiation variables
     private const int SPAWNER_AMOUNT = 3;
@@ -25,21 +25,6 @@ public class WaveHandler : MonoBehaviour
     private float _SpawnerMinimumSpacing = 10f;                 // The minimum distance to respect between the origin of two spawners
 
 
-    public void StartNewWave()
-    {
-        if (_IsWaveInProgress) return;
-
-        List<Vector3> spawnerPositionList = ComputeSpawnerPositionList(SPAWNER_AMOUNT);
-        foreach (Vector3 existingSpawnerPosition in spawnerPositionList)
-        {
-            GameObject spawnPrefab = EnemyReferences.Instance.SpawnerPrefab;
-            GameObject spawner = Object.Instantiate(spawnPrefab, existingSpawnerPosition, Quaternion.identity);
-            spawnerBehaviourList.Add(spawner.GetComponent<SpawnerBehaviour>());
-        }
-        _IsWaveInProgress = true;
-        _WaveCountdownTimer = WAVE_DURATION;
-    }
-
     void Update()
     {
         // Handles the wave time
@@ -50,8 +35,37 @@ public class WaveHandler : MonoBehaviour
             {
                 EndSpawnWave();
             }
-            GlobalReferences.Instance.WaveTimerTMP.text = System.Math.Round(_WaveCountdownTimer, 2).ToString();
+            UpdateTimerText();
         }
+    }
+
+    public void StartNewWave()
+    {
+        if (_IsWaveInProgress) return;
+
+        MainController.Instance.PrepareForWaveStart();  // Resets the player health to max
+
+        List<Vector3> spawnerPositionList = ComputeSpawnerPositionList(SPAWNER_AMOUNT);
+        foreach (Vector3 existingSpawnerPosition in spawnerPositionList)
+        {
+            GameObject spawnPrefab = EnemyReferences.Instance.SpawnerPrefab;
+            GameObject spawner = Object.Instantiate(spawnPrefab, existingSpawnerPosition, Quaternion.identity);
+            spawnerBehaviourList.Add(spawner.GetComponent<SpawnerBehaviour>());
+        }
+        _IsWaveInProgress = true;
+        GlobalReferences.Instance.WaveTimerTMP.color = Color.white;
+        _WaveCountdownTimer = WAVE_DURATION;
+    }
+
+    public void GameOver()
+    {
+        _IsWaveInProgress = false;
+        GlobalReferences.Instance.WaveTimerTMP.color = Color.red;
+        foreach (SpawnerBehaviour spawner in spawnerBehaviourList)
+        {
+            spawner.DisableSpawner();
+        }
+        EnemyReferences.Instance.RemoveAndDestroyAllEnemies();
     }
 
     public void EndSpawnWave()
@@ -64,6 +78,14 @@ public class WaveHandler : MonoBehaviour
         {
             spawner.DisableSpawner();
         }
+    }
+
+    private void UpdateTimerText()
+    {
+        string timerText = System.Math.Round(_WaveCountdownTimer, 2).ToString();
+        if (_WaveCountdownTimer < 10f) timerText = "0" + timerText;
+        if (_WaveCountdownTimer == 0f) timerText = "00.00";
+        GlobalReferences.Instance.WaveTimerTMP.text = timerText;
     }
 
     public void LastEnemyKilled()

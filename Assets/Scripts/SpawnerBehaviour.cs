@@ -14,7 +14,8 @@ public class SpawnerBehaviour : MonoBehaviour
     [SerializeField] private GameObject _EnemyPrefabToSpawn;
 
     // Time in seconds after which an enemy is spawned
-    [SerializeField] private float SpawnDelay = 5f;
+    private const float SPAWN_DELAY = 8f;
+    private const float START_SPAWN_DELAY = 1f;
     [SerializeField] private float SpawnDelayRandomness = 1f;   // To give a bit more variation to the spawning, and avoid all spawns to sync up
     private float SpawnCountdown;
 
@@ -24,7 +25,7 @@ public class SpawnerBehaviour : MonoBehaviour
     [SerializeField] private float _SplineRandomnessMagnitude = 1f;         // The amount of randomness in the distance to stray from a direct path from the spawner to the player
     [SerializeField] private float _KnotWorldMinimalHeight = 1f;            // The minimal height of each spline knot in world coordinates, regardless of randomness
 
-    [SerializeField] private float _SpawnerVisualsDisablingProcessTimer;
+    private float _SpawnerVisualsDisablingProcessTimer = 2f;
 
     // Update is called once per frame
     void Start()
@@ -37,7 +38,7 @@ public class SpawnerBehaviour : MonoBehaviour
         _OuterRing.transform.DORotate(InnerRingRotation, 2f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
         _InnerRing.transform.DORotate(OuterRingRotation, 3f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
 
-        SpawnCountdown = Random.Range(SpawnDelay - SpawnDelayRandomness/2, SpawnDelay + SpawnDelayRandomness / 2); // Resets the spawn countdown
+        SpawnCountdown = Random.Range(START_SPAWN_DELAY- SpawnDelayRandomness/2, START_SPAWN_DELAY + SpawnDelayRandomness / 2); // Small cooldown for the first spawn, with a small random aspect
     }
 
     void Update()
@@ -51,7 +52,7 @@ public class SpawnerBehaviour : MonoBehaviour
                 SplineContainer splineContainer = this.gameObject.GetComponent<SplineContainer>();
                 spawnedEnemy.GetComponent<SplineFollowingEnemyBehaviour>().Init(splineContainer);
 
-                SpawnCountdown = Random.Range(SpawnDelay - SpawnDelayRandomness / 2, SpawnDelay + SpawnDelayRandomness / 2); // Resets the spawn countdown
+                SpawnCountdown = Random.Range(SPAWN_DELAY - SpawnDelayRandomness / 2, SPAWN_DELAY + SpawnDelayRandomness / 2); // Resets the spawn countdown
             }
         }
     }
@@ -90,9 +91,14 @@ public class SpawnerBehaviour : MonoBehaviour
         _PathToPlayer.SetTangentMode(TangentMode.AutoSmooth);
     }
 
+    /// <summary>
+    /// Disables the visuals of the spawner and prevents more spawns, but does not destroy the spawner
+    /// </summary>
     public void DisableSpawner()
     {
-        this.transform.DOScale(Vector3.zero, _SpawnerVisualsDisablingProcessTimer);
+        IsSpawnerActive = false;
+        _OuterRing.transform.DOScale(Vector3.zero, _SpawnerVisualsDisablingProcessTimer);
+        _InnerRing.transform.DOScale(Vector3.zero, _SpawnerVisualsDisablingProcessTimer);
         Invoke(nameof(DisableSpawnerVisuals), _SpawnerVisualsDisablingProcessTimer);
     }
     private void DisableSpawnerVisuals()

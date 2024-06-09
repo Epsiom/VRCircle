@@ -213,10 +213,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0240e0e7c590a448a52a2174eeb9f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsSpawnerActive: 1
   _OuterRing: {fileID: 6877985090696200148}
   _InnerRing: {fileID: 5928867000496824041}
   _EnemyPrefabToSpawn: {fileID: 6500800842562642357, guid: f48fd821106aafc4691318d073a2d1b1, type: 3}
   SpawnDelay: 6
+  SpawnDelayRandomness: 1
   _PathToPlayer:
     m_EditModeType: 1
     m_Knots: []
@@ -233,6 +235,7 @@ MonoBehaviour:
   _SplineKnotPerDistanceUnit: 1
   _SplineRandomnessMagnitude: 0.6
   _KnotWorldMinimalHeight: 1
+  _SpawnerVisualsDisablingProcessTimer: 3
 --- !u!114 &4738129735846200759
 MonoBehaviour:
   m_ObjectHideFlags: 0

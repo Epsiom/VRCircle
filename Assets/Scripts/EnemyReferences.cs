@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +41,16 @@ public class EnemyReferences : MonoBehaviour
         {
             WaveHandler.Instance.LastEnemyKilled();
         }
+    }
+
+    public void RemoveAndDestroyAllEnemies()
+    {
+        foreach (GameObject enemy in this.Enemies)
+        {
+            //DOTween.Kill(enemy);
+            Destroy(enemy);
+        }
+        this.Enemies = new List<GameObject>();
     }
 
     /// <summary>
