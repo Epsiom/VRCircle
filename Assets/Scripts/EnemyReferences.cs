@@ -43,6 +43,7 @@ public class EnemyReferences : MonoBehaviour
         }
     }
 
+    //TODO: do something else here
     public void RemoveAndDestroyAllEnemies()
     {
         foreach (GameObject enemy in this.Enemies)

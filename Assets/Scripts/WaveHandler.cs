@@ -45,6 +45,16 @@ public class WaveHandler : MonoBehaviour
 
         MainController.Instance.PrepareForWaveStart();  // Resets the player health to max
 
+
+        //TODO: do something else here
+        // Destroys all spawners
+        foreach (SpawnerBehaviour spawner in spawnerBehaviourList)
+        {
+            Destroy(spawner.gameObject);
+        }
+        spawnerBehaviourList = new List<SpawnerBehaviour>();
+
+
         List<Vector3> spawnerPositionList = ComputeSpawnerPositionList(SPAWNER_AMOUNT);
         foreach (Vector3 existingSpawnerPosition in spawnerPositionList)
         {
@@ -61,10 +71,14 @@ public class WaveHandler : MonoBehaviour
     {
         _IsWaveInProgress = false;
         GlobalReferences.Instance.WaveTimerTMP.color = Color.red;
+
+        // Destroys all spawners
         foreach (SpawnerBehaviour spawner in spawnerBehaviourList)
         {
-            spawner.DisableSpawner();
+            Destroy(spawner.gameObject);
         }
+        spawnerBehaviourList = new List<SpawnerBehaviour>();
+
         EnemyReferences.Instance.RemoveAndDestroyAllEnemies();
     }
 
@@ -96,6 +110,7 @@ public class WaveHandler : MonoBehaviour
             {
                 Object.Destroy(spawnerBehaviour.gameObject);
             }
+            spawnerBehaviourList = new List<SpawnerBehaviour>();
         }
     }
 
